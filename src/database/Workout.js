@@ -3,75 +3,75 @@ const { saveToDatabase } = require("./utils");
 
 const getAllWorkout = (filterParams) => {
     try {
-        let workouts = DB.workouts;
+        let Data_pies = DB.Data_pies;
         if (filterParams.mode) {
-            return DB.workouts.filter((workout) =>
-                workout.mode.toLowerCase().includes(filterParams.mode)
+            return DB.Data_pies.filter((dataPies) =>
+                dataPies.mode.toLowerCase().includes(filterParams.mode)
             );
         }
         // Other if-statements will go here for different parameters
-        return workouts;
+        return Data_pies;
     } catch (error) {
         throw { status: 500, message: error };
     }
 };
 
-const getOneWorkout = (workoutId) => {
-    const workout = DB.workouts.find((workout) => workout.id === workoutId);
+const getOneWorkout = (dataPiesId) => {
+    const dataPies = DB.Data_pies.find((dataPies) => dataPies.id === dataPiesId);
 
-    if (!workout) {
+    if (!dataPies) {
         return;
     }
 
-    return workout;
+    return dataPies;
 }
 
-const createNewWorkout = (newWorkout) => {
+const createNewWorkout = (newdataPies) => {
     const isAlreadyAdded =
-        DB.workouts.findIndex((workout) => workout.name === newWorkout.name) > -1;
+        DB.Data_pies.findIndex((dataPies) => dataPies.name === newdataPies.name) > -1;
     if (isAlreadyAdded) {
         throw {
             status: 400,
-            message: `Workout with the name '${newWorkout.name}' already exists`
+            message: `Workout with the name '${newdataPies.name}' already exists`
         }
     }
 
     try {
-        DB.workouts.push(newWorkout);
+        DB.Data_pies.push(newdataPies);
         saveToDatabase(DB);
-        return newWorkout;
+        return newdataPies;
     } catch (error) {
         throw { status: 500, message: error?.message0 || error };
     }
 
 };
 
-const updateOneWorkout = (workoutId, changes) => {
-    const indexForUpdated = DB.workouts.findIndex((workout) => workout.id === workoutId);
+const updateOneWorkout = (dataPiesId, changes) => {
+    const indexForUpdated = DB.Data_pies.findIndex((dataPies) => dataPies.id === dataPiesId);
 
     if (indexForUpdated === -1) {
         return;
     }
 
     const updatedWorkout = {
-        ...DB.workouts[indexForUpdated],
+        ...DB.Data_pies[indexForUpdated],
         ...changes,
         updatedAt: new Date().toLocaleString("en-US", { timeZone: "UTC" })
     };
 
-    DB.workouts[indexForUpdated] = updatedWorkout;
+    DB.Data_pies[indexForUpdated] = updatedWorkout;
     saveToDatabase(DB);
     return updatedWorkout;
 }
 
-const deleteOneWorkout = (workoutId) => {
-    const indexForDeleted = DB.workouts.findIndex((workout) => workout.id === workoutId);
+const deleteOneWorkout = (dataPiesId) => {
+    const indexForDeleted = DB.Data_pies.findIndex((dataPies) => dataPies.id === dataPiesId);
 
     if (indexForDeleted === -1) {
         return;
     }
 
-    DB.workouts.splice(indexForDeleted, 1);
+    DB.Data_pies.splice(indexForDeleted, 1);
     saveToDatabase(DB);
 }
 
