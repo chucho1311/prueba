@@ -7,6 +7,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const cache = apicache.middleware;
 
+header('Access-Control-Allow-Origin: *')
+
 app.use(express.json());
 app.use(cache("2 minutes"));
 app.use("/api/v1", v1WorkoutRouter);
