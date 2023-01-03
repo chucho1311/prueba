@@ -1,5 +1,18 @@
 const recordService = require("../services/reacordService");
 
+const getAllUsers = (req, res) => {
+    const { mode } = req.query;
+
+    try {
+        const allUsers = recordService.getAllUsers({ mode });
+        res.send({ status: "OK", data: allUsers });
+    } catch (error) {
+        res
+            .status(error?.status || 500)
+            .send({ status: "FAILED", data: { error: error?.message || error } });
+    }
+}
+
 const getRecordForWorkout = (req, res) => {
 
     const {
@@ -20,10 +33,11 @@ const getRecordForWorkout = (req, res) => {
     } catch (error) {
         res
             .status(error?.status || 500)
-            .send({status: "FAILED", data: {error: error?.message}})
+            .send({ status: "FAILED", data: { error: error?.message } })
     }
 }
 
 module.exports = {
+    getAllUsers,
     getRecordForWorkout
 }

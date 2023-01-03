@@ -1,14 +1,29 @@
 
 const DB = require("./db.json");
 
-const getRecordForWorkout = (workoutId) => {
+const getAllUsers = (filterParams) => {
+    try {
+        let Users = DB.Users;
+        if (filterParams.mode) {
+            return DB.Users.filter((dataUser) =>
+                dataUser.mode.toLowerCase().includes(filterParams.mode)
+            );
+        }
+        // Other if-statements will go here for different parameters
+        return Users;
+    } catch (error) {
+        throw { status: 500, message: error };
+    }
+}
+
+const getRecordForWorkout = (userId) => {
     try {
 
-        const record = DB.records.filter((record) => record.workout === workoutId);
+        const record = DB.Users.filter((record) => record.workout === workoutId);
         if(!record) {
             throw{
                 status: 400,
-                message: `Can't find workout with the id '${workoutId}'`
+                message: `Can't find workout with the id '${userId}'`
             }
         }
 
@@ -19,4 +34,7 @@ const getRecordForWorkout = (workoutId) => {
     }
 }
 
-module.exports = { getRecordForWorkout };
+module.exports = { 
+    getAllUsers,
+    getRecordForWorkout
+ };
