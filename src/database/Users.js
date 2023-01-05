@@ -10,6 +10,7 @@ const getAllUsers = (filterParams) => {
             );
         }
         // Other if-statements will go here for different parameters
+        console.log(Users);
         return Users;
     } catch (error) {
         throw { status: 500, message: error };

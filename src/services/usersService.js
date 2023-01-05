@@ -1,9 +1,9 @@
 
-const Record = require('../database/Record');
+const Users = require('../database/Users');
 
 const getAllUsers = (filterParams) => {
     try {
-        const allUsers = Record.getAllUsers(filterParams);
+        const allUsers = Users.getAllUsers(filterParams);
         return allUsers;
     } catch (error) {
         throw error;

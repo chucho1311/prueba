@@ -23,7 +23,7 @@ const getOneWorkout = (req, res) => {
   }
 
   const workout = workoutServices.getOneWorkout(workoutId);
-  res.send({ status: "OK", data: workout });
+  res.send({ status: "OK in get one workout", data: workout });
 }
 
 const createNewWorkout = (req, res) => {

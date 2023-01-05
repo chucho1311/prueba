@@ -2,14 +2,65 @@
 
     "Users":[
         {
-            "id":1,
+            "user_id":1,
             "user": "prueba",
-            "password": "prueba_1"
+            "password": "prueba_1",
+            "Data_pies": [
+                {
+                    "idPies":1,
+                    "title": "Medias Usadas por 2 Dias",
+                    "description":"Se venden medias de una sexy rubia, llevan 48 horas de uso",
+                    "number":"321654987",
+                    "photo":"pies-mona.jpeg",
+                    "price": 40000
+                },
+                {
+                    "idPies":2,
+                    "title": "Medias Usadas por 2 Dias",
+                    "description":"Se venden medias de una sexy rubia, llevan 48 horas de uso",
+                    "number":"321654987",
+                    "photo":"pies-mona.jpeg",
+                    "price": 40000
+                },
+                {
+                    "idPies":3,
+                    "title": "Medias Usadas por 2 Dias",
+                    "description":"Se venden medias de una sexy rubia, llevan 48 horas de uso",
+                    "number":"321654987",
+                    "photo":"pies-mona.jpeg",
+                    "price": 40000
+                },
+                {
+                    "idPies":3,
+                    "title": "Medias Usadas por 2 Dias",
+                    "description":"Se venden medias de una sexy rubia, llevan 48 horas de uso",
+                    "number":"321654987",
+                    "photo":"pies-mona.jpeg",
+                    "price": 40000
+                },
+                {
+                    "idPies":3,
+                    "title": "Medias Usadas por 2 Dias",
+                    "description":"Se venden medias de una sexy rubia, llevan 48 horas de uso",
+                    "number":"321654987",
+                    "photo":"pies-mona.jpeg",
+                    "price": 40000
+                },
+                {
+                    "idPies":3,
+                    "title": "Medias Usadas por 2 Dias",
+                    "description":"Se venden medias de una sexy rubia, llevan 48 horas de uso",
+                    "number":"321654987",
+                    "photo":"pies-mona.jpeg",
+                    "price": 40000
+                }
+            ]
         },
         {
-            "id":2,
+            "user_id":2,
             "user": "prueba2",
-            "password": "prueba_2"
+            "password": "prueba_2",
+            "Data_pies":[]
         }
     ],
     "Data_pies": [

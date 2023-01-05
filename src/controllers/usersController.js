@@ -1,10 +1,11 @@
-const recordService = require("../services/reacordService");
+const usersService = require("../services/usersService");
 
 const getAllUsers = (req, res) => {
     const { mode } = req.query;
 
     try {
-        const allUsers = recordService.getAllUsers({ mode });
+        const allUsers = usersService.getAllUsers({ mode });
+        console.log(allUsers);
         res.send({ status: "OK", data: allUsers });
     } catch (error) {
         res
