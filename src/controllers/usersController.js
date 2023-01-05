@@ -5,7 +5,7 @@ const getAllUsers = (req, res) => {
 
     try {
         const allUsers = usersService.getAllUsers({ mode });
-        console.log(allUsers);
+        // console.log(allUsers);
         res.send({ status: "OK", data: allUsers });
     } catch (error) {
         res
@@ -14,31 +14,91 @@ const getAllUsers = (req, res) => {
     }
 }
 
-const getRecordForWorkout = (req, res) => {
+const getOneUser = (req, res) => {
 
     const {
-        params: { workoutId }
+        params: { userId }
     } = req;
 
-    if (!workoutId) {
+    if (!userId) {
         res.status(400).send({
             status: "FAILED",
-            data: { error: "':workoutId' not found" }
+            data: { error: "':userId' not found" }
         });
         return;
     }
 
     try {
-        const record = recordService.getRecordForWorkout(workoutId);
-        res.send({ status: "OK", data: record });
+        const user = usersService.getOneUser(userId);
+        res.send({ status: "OK get one User", data: user });
     } catch (error) {
         res
             .status(error?.status || 500)
-            .send({ status: "FAILED", data: { error: error?.message } })
+            .send({ status: "FAILED in get one user", data: { error: error?.message } })
     }
+}
+
+const createUser = (req, res) => {
+
+    const { body } = req;
+
+    if (
+        !body.user ||
+        !body.password
+    ) {
+        res.status(400).send({
+            status: "FAILED",
+            data: { error: "One of the following keys are missing" }
+        })
+    }
+
+    const newUser = {
+        user: body.user,
+        password: body.password,
+        Data_pies: []
+    };
+
+    try {
+        const createdUser = usersService.createNewUser(newUser);
+        res.status(201).send({ status: "Created", data: createdUser });
+    } catch (error) {
+        res
+            .status(error?.status || 500)
+            .send({ status: "Failed in create", data: { error: error?.message || error } });
+    }
+}
+
+const updateOneUser = (req, res) => {
+
+    const { body, params: { userId } } = req;
+
+    if (!userId) {
+        res
+            .status(400)
+            .send({ status: "Failed updated", data: { error: "Parameter ':userId' can not be empty" } })
+    }
+
+    const updatedUser = usersService.updateOneUser(userId, body);
+    return updatedUser;
+}
+
+const deleteOneUser = (req, res) => {
+    const {
+        params: { userId },
+    } = req;
+
+    if (!userId) {
+        return;
+    }
+
+    const user = usersService.deleteOneUser(userId);
+    res.status(204).send({ status: "OK", data: user });
 }
 
 module.exports = {
     getAllUsers,
-    getRecordForWorkout
+    getOneUser,
+    createUser,
+    updateOneUser,
+    deleteOneUser
 }
