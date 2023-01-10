@@ -3,6 +3,7 @@ const router = express.Router();
 const apicache = require('apicache');
 const workoutController = require("../../controllers/workoutController");
 const userController = require("../../controllers/usersController");
+const paypal = require("../../Paypal/Paypal");
 
 
 router 
@@ -18,5 +19,8 @@ router
     .post("/users", userController.createUser)
     .patch("/users/:userId", userController.updateOneUser)
     .delete("/users/:userId", userController.deleteOneUser)
+    //Rutas para el pago de Paypal
+    .get("/execute-payment", paypal.ExecutePayment)
+    .post("/create-payment", paypal.CreatePayment)
     
 module.exports = router;
