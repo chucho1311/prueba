@@ -2,8 +2,10 @@
   "Users": [
     {
       "user_id": "1",
-      "user": "prueba",
-      "password": "prueba_1",
+      "user": "JenniZarem",
+      "password": "zarem123",
+      "name": "Mona",
+      "principal_photo": "https://firebasestorage.googleapis.com/v0/b/fir-data-c07ef.appspot.com/o/mona.jpeg?alt=media&token=757890d7-b91b-4c7f-a941-906000cdcbe6",
       "Data_pies": [
         {
           "idPies": 1,
@@ -56,20 +58,14 @@
       ]
     },
     {
-      "user": "prueba_create",
-      "password": "prueba_create1",
+      "user": "gordaAnggy",
+      "password": "dulce123",
+      "name": "Gorda",
+      "principal_photo": "https://firebasestorage.googleapis.com/v0/b/fir-data-c07ef.appspot.com/o/gorda.jpeg?alt=media&token=c140578f-0cec-446c-960a-ac10b43df604",
       "Data_pies": [],
       "user_id": "eba32432-9352-4b1a-b7bd-7f1a8f8856cb",
       "createdAt": "1/5/2023, 6:17:49 PM",
       "updatedAt": "1/5/2023, 6:17:49 PM"
-    },
-    {
-      "user": "edit segunda_prueba",
-      "password": "segunda_prueba",
-      "Data_pies": [],
-      "user_id": "d70d1950-93d0-4a1b-a6fb-459960a267d4",
-      "createdAt": "1/5/2023, 7:10:51 PM",
-      "updatedAt": "1/5/2023, 7:11:37 PM"
     }
   ],
   "Data_pies": [
