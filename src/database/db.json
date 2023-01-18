@@ -56,6 +56,8 @@
           "price": 40000
         }
       ],
+      "Data_manos": [],
+      "Data_lenceria": [],
       "updatedAt": "1/15/2023, 10:50:39 PM"
     },
     {
@@ -64,6 +66,8 @@
       "name": "Gorda",
       "principal_photo": "https://firebasestorage.googleapis.com/v0/b/fir-data-c07ef.appspot.com/o/gorda.jpeg?alt=media&token=c140578f-0cec-446c-960a-ac10b43df604",
       "Data_pies": [],
+      "Data_manos": [],
+      "Data_lenceria": [],
       "user_id": "eba32432-9352-4b1a-b7bd-7f1a8f8856cb",
       "createdAt": "1/5/2023, 6:17:49 PM",
       "updatedAt": "1/5/2023, 6:17:49 PM"

@@ -6,7 +6,7 @@ const userController = require("../../controllers/usersController");
 const paypal = require("../../Paypal/Paypal");
 
 
-router 
+router //Ruta Principal: https://prueba.up.railway.app/
     //Rutas para la informarción de Pies
     .get("/pies", workoutController.getAllWorkouts)
     .get("/pies/:workoutId", workoutController.getOneWorkout)
