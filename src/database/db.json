@@ -13,7 +13,8 @@
           "description": "Se venden medias de una sexy rubia, llevan 48 horas de uso",
           "number": "321654987",
           "photo": "pies-mona.jpeg",
-          "price": 40000
+          "price": 40000,
+          "pedidos": []
         },
         {
           "idPies": 2,
@@ -21,7 +22,8 @@
           "description": "Se venden medias de una sexy rubia, llevan 48 horas de uso",
           "number": "321654987",
           "photo": "pies-mona.jpeg",
-          "price": 40000
+          "price": 40000,
+          "pedidos": []
         },
         {
           "idPies": 3,
@@ -29,7 +31,8 @@
           "description": "Se venden medias de una sexy rubia, llevan 48 horas de uso",
           "number": "321654987",
           "photo": "pies-mona.jpeg",
-          "price": 40000
+          "price": 40000,
+          "pedidos": []
         },
         {
           "idPies": 3,
@@ -37,7 +40,8 @@
           "description": "Se venden medias de una sexy rubia, llevan 48 horas de uso",
           "number": "321654987",
           "photo": "pies-mona.jpeg",
-          "price": 40000
+          "price": 40000,
+          "pedidos": []
         },
         {
           "idPies": 3,
@@ -45,7 +49,8 @@
           "description": "Se venden medias de una sexy rubia, llevan 48 horas de uso",
           "number": "321654987",
           "photo": "pies-mona.jpeg",
-          "price": 40000
+          "price": 40000,
+          "pedidos": []
         },
         {
           "idPies": 3,
@@ -53,7 +58,8 @@
           "description": "Se venden medias de una sexy rubia, llevan 48 horas de uso",
           "number": "321654987",
           "photo": "pies-mona.jpeg",
-          "price": 40000
+          "price": 40000,
+          "pedidos": []
         }
       ],
       "Data_manos": [],
