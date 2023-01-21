@@ -17,7 +17,7 @@ router //Ruta Principal: https://prueba.up.railway.app/
     .get("/users", userController.getAllUsers)
     .get("/users/:userId", userController.getOneUser)
     .post("/users", userController.createUser)
-    .patch("/users/:userId", userController.updateOneUser)
+    .post("/users/:userId", userController.updateOneUser)
     .delete("/users/:userId", userController.deleteOneUser)
     //Rutas para el pago de Paypal
     .get("/execute-payment", paypal.ExecutePayment)
