@@ -71,7 +71,35 @@
       "password": "dulce123",
       "name": "Gorda",
       "principal_photo": "https://firebasestorage.googleapis.com/v0/b/fir-data-c07ef.appspot.com/o/gorda.jpeg?alt=media&token=c140578f-0cec-446c-960a-ac10b43df604",
-      "Data_pies": [],
+      "Data_pies": [
+        {
+          "idPies": 1,
+          "title": "Medias Usadas por 2 Dias",
+          "description": "Se venden medias de una sexy rubia, llevan 48 horas de uso",
+          "number": "321654987",
+          "photo": "pies-mona.jpeg",
+          "price": 40000,
+          "pedidos": []
+        },
+        {
+          "idPies": 2,
+          "title": "Medias Usadas por 2 Dias",
+          "description": "Se venden medias de una sexy rubia, llevan 48 horas de uso",
+          "number": "321654987",
+          "photo": "pies-mona.jpeg",
+          "price": 40000,
+          "pedidos": []
+        },
+        {
+          "idPies": 3,
+          "title": "Medias Usadas por 2 Dias",
+          "description": "Se venden medias de una sexy rubia, llevan 48 horas de uso",
+          "number": "321654987",
+          "photo": "pies-mona.jpeg",
+          "price": 40000,
+          "pedidos": []
+        }
+      ],
       "Data_manos": [],
       "Data_lenceria": [],
       "user_id": "eba32432-9352-4b1a-b7bd-7f1a8f8856cb",
